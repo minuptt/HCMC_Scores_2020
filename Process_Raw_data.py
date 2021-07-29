@@ -7,7 +7,7 @@ file = open("raw_data.txt", "r")
 datas = file.read().split("\n")
 
 # write a header to csv
-with open("/Users/thiphan/Desktop/HCMC_scores/clean_data.csv", encoding = "utf8", mode = "w", newline = '') as file_csv:
+with open("clean_data.csv", encoding = "utf8", mode = "w", newline = '') as file_csv:
     #header = ["sbd", "tên", "dd", "mm", "yy", "toán", "ngữ văn", "khxh", "khtn", "lịch sử", "địa lí", "gdcd", "sinh học", "vật lí", "hóa học", "tiếng anh"]
     header = ["Std_ID", "Name", "dd", "mm", "yy", "Math", "Literature", "Social Sciences", "Natural Sciences", "History", "Geography", "Humanities", "Biography", "Physic", "Chemisty", "English"]
     writer = csv.writer(file_csv)
@@ -62,7 +62,7 @@ for data in datas:
     chars = [] # special character
     codes = [] # code of special character
 
-    file = open("/Users/thiphan/Desktop/HCMC_scores/unicode.txt", encoding = "utf8")
+    file = open("unicode.txt", encoding = "utf8")
     unicode_table = file.read().split("\n")
 
     for code in unicode_table:
@@ -115,6 +115,6 @@ for data in datas:
             data.append("-1")
 
     # write data to csv
-    with open("/Users/thiphan/Desktop/HCMC_scores/clean_data.csv", "a", encoding="utf8", newline = '') as file_csv:
+    with open("clean_data.csv", "a", encoding="utf8", newline = '') as file_csv:
         writer = csv.writer(file_csv)
         writer.writerow(data)
