@@ -2,7 +2,7 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 # read file
-with open("/Users/thiphan/Desktop/HCMC_scores/HCMC_scores_2020/clean_data.csv", encoding="utf8") as file:
+with open("clean_data.csv", encoding="utf8") as file:
     data = file.read().split("\n")
 
 header = data[0]
