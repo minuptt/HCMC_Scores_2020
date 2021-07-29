@@ -1,7 +1,7 @@
 import csv
 
 # open and read raw_data file
-file = open("/Users/thiphan/Desktop/HCMC_scores/raw_data.txt", "r")
+file = open("raw_data.txt", "r")
 
 # read file and create a list of raw data
 datas = file.read().split("\n")
