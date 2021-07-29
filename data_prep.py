@@ -1,6 +1,6 @@
 #class Data_prep:
 # read file
-with open("/Users/thiphan/Desktop/HCMC_scores/clean_data.csv", encoding = "utf8") as file:
+with open("clean_data.csv", encoding = "utf8") as file:
      data = file.read().split("\n")
 
 header = data[0]
